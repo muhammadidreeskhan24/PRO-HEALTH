@@ -1,0 +1,436 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://muhammadidreeskhan24.github.io/PRO-HEALTH/
+Subject: =?utf-8?Q?Pro=20Health=20=E2=80=94=20Routine=20&=20Health?=
+Date: Fri, 4 Sep 2026 12:31:52 +0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--d8mNJuUSXCwfos5DSfAo6R1YvsIhiQMgNwaLVD4pSb----"
+
+
+------MultipartBoundary--d8mNJuUSXCwfos5DSfAo6R1YvsIhiQMgNwaLVD4pSb----
+Content-Type: text/html
+Content-ID: <frame-C37CA40BD43DBDF62F300584AE581B2D@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://muhammadidreeskhan24.github.io/PRO-HEALTH/
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-e7f64e37-a2e2-4831-9704-47a4ed09c55d@mhtml.blink" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Health — Routine &amp; Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-top">
+      <div class="brand">Pro Health</div>
+      <div class="date" id="dateLabel">Friday, September 4</div>
+    </div>
+    <div class="clock" id="clock">12:31:51</div>
+    <div class="next-line" id="nextLine">Next: <b>Read 20 MCQs</b> in 29m</div>
+    <div class="hero-actions">
+      <button id="enableBtn">Enable alerts</button>
+      <button class="secondary" id="testBtn">Test alert</button>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="routine">Routine</div>
+    <div class="tab" data-tab="study">Study &amp; sleep</div>
+    <div class="tab" data-tab="health">Weight &amp; height</div>
+    <div class="tab" data-tab="walk">Walking</div>
+    <div class="tab" data-tab="cal">Calories</div>
+  </div>
+
+  <!-- ROUTINE -->
+  <div class="panel active" id="panel-routine">
+    <h2>Daily routine</h2>
+    <p class="sub">Add each part of your day once — it repeats every day and you'll get an alert at that time while this page is open.</p>
+    <div class="card">
+      <div class="row">
+        <div class="field">
+          <label>Time</label>
+          <input type="time" id="rTime" value="07:00">
+        </div>
+        <div class="field" style="flex:2;">
+          <label>What happens</label>
+          <input type="text" id="rLabel" placeholder="e.g. Morning walk">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button id="rAdd">Add to routine</button>
+      </div>
+    </div>
+    <ul class="timeline" id="routineList"><li class="empty">No routine items yet — add your first one above.</li></ul>
+  </div>
+
+  <!-- STUDY & SLEEP -->
+  <div class="panel" id="panel-study">
+    <h2>Study reminders</h2>
+    <p class="sub">A repeating alert to read 20 MCQs, spaced through your waking hours.</p>
+    <div class="card">
+      <div class="toggle-row">
+        <div>
+          <div class="t-label">Every-2-hours MCQ reminder</div>
+          <div class="t-desc" id="studyDesc">5:00 AM – 11:00 PM, every 2h</div>
+        </div>
+        <button class="switch on" id="studyToggle"></button>
+      </div>
+      <div class="row" style="margin-top:12px;">
+        <div class="field">
+          <label>Start</label>
+          <input type="time" id="studyStart" value="05:00">
+        </div>
+        <div class="field">
+          <label>End</label>
+          <input type="time" id="studyEnd" value="23:00">
+        </div>
+        <div class="field">
+          <label>Every (hrs)</label>
+          <input type="number" id="studyInterval" min="1" max="12" value="2">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button class="secondary" id="studySave">Save schedule</button>
+      </div>
+      <p class="note" style="margin-top:10px;" id="studyPreview">Alerts at: 5:00 AM, 7:00 AM, 9:00 AM, 11:00 AM, 1:00 PM, 3:00 PM, 5:00 PM, 7:00 PM, 9:00 PM, 11:00 PM</p>
+    </div>
+
+    <h2 style="margin-top:26px;">Sleep</h2>
+    <p class="sub">Your sleep window is 11:30 PM – 5:00 AM. A bedtime alert fires beforehand so you're not still on your phone.</p>
+    <div class="card">
+      <div class="toggle-row">
+        <div>
+          <div class="t-label">Bedtime alert</div>
+          <div class="t-desc" id="bedDesc">11:30 PM — time to go to bed</div>
+        </div>
+        <button class="switch on" id="bedToggle"></button>
+      </div>
+      <div class="row" style="margin-top:12px;">
+        <div class="field">
+          <label>Bedtime</label>
+          <input type="time" id="bedTime" value="23:30">
+        </div>
+        <div class="field">
+          <label>Wake time</label>
+          <input type="time" id="wakeTime" value="05:00">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button class="secondary" id="bedSave">Save sleep window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="panel" id="panel-health">
+    <h2>Weight &amp; height</h2>
+    <p class="sub">Log an entry any time. BMI is calculated from your most recent weight and height.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num" id="bmiNum">—</div><div class="lbl">BMI</div></div>
+      <div class="stat"><div class="num" id="wNum">—</div><div class="lbl">Weight (kg)</div></div>
+      <div class="stat"><div class="num" id="hNum">—</div><div class="lbl">Height (cm)</div></div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="field">
+          <label>Weight (kg)</label>
+          <input type="number" step="0.1" id="wIn" placeholder="e.g. 68.5">
+        </div>
+        <div class="field">
+          <label>Height (cm)</label>
+          <input type="number" step="0.1" id="hIn" placeholder="e.g. 172">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button id="wAdd">Log entry</button>
+      </div>
+    </div>
+    <ul class="log-list" id="healthList"><li class="empty">No entries yet.</li></ul>
+  </div>
+
+  <!-- WALKING -->
+  <div class="panel" id="panel-walk">
+    <h2>Walking distance</h2>
+    <p class="sub">Track how far you walk each day.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num" id="walkToday">0.0</div><div class="lbl">Today (km)</div></div>
+      <div class="stat"><div class="num" id="walkWeek">0.0</div><div class="lbl">This week (km)</div></div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="field">
+          <label>Distance (km)</label>
+          <input type="number" step="0.1" id="distIn" placeholder="e.g. 3.2">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button id="distAdd">Log walk</button>
+      </div>
+    </div>
+    <ul class="log-list" id="walkList"><li class="empty">No walks logged yet.</li></ul>
+  </div>
+
+  <!-- CALORIES -->
+  <div class="panel" id="panel-cal">
+    <h2>Calories</h2>
+    <p class="sub">Log what you eat and keep a running total for today.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num" id="calToday">0</div><div class="lbl">Today (kcal)</div></div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="field" style="flex:2;">
+          <label>Item</label>
+          <input type="text" id="calItem" placeholder="e.g. Chicken rice bowl">
+        </div>
+        <div class="field">
+          <label>Calories</label>
+          <input type="number" id="calAmt" placeholder="e.g. 550">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button id="calAdd">Log food</button>
+      </div>
+    </div>
+    <ul class="log-list" id="calList"><li class="empty">No food logged yet.</li></ul>
+  </div>
+
+  <div class="footnote">
+    Alerts (sound, on-screen banner, and browser notification) only fire while this page is open in your browser — it can't wake your phone the way a native alarm does. For a guaranteed wake-up or bedtime alarm, pair this with your phone's built-in alarm; use this for the every-2-hours study nudge and tracking while you're active during the day.
+  </div>
+</div>
+
+<div id="toast">
+  <button class="tx" id="toastClose">✕</button>
+  <div class="tt" id="toastTitle">Reminder</div>
+  <div class="td" id="toastDesc"></div>
+</div>
+
+
+
+
+</body></html>
+------MultipartBoundary--d8mNJuUSXCwfos5DSfAo6R1YvsIhiQMgNwaLVD4pSb----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCBTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCFTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCBTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCFTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCBTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCFTeP2Xz5fU8w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Fraunces; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--d8mNJuUSXCwfos5DSfAo6R1YvsIhiQMgNwaLVD4pSb----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-e7f64e37-a2e2-4831-9704-47a4ed09c55d@mhtml.blink
+
+@charset "utf-8";
+
+:root { --paper: #F1EDE2; --paper-raised: #F8F5EC; --ink: #1E2A3A; --ink-soft: #5B6472; --accent: #C0842B; --accent-soft: #EADFC3; --line: #D8D0BC; --danger: #AD4B3C; --danger-soft: #F3DDD6; --success: #4C7A5E; --success-soft: #DCE7DE; }
+
+* { box-sizing: border-box; }
+
+body { margin: 0px; background: var(--paper); color: var(--ink); font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.wrap { max-width: 640px; margin: 0px auto; padding: 28px 20px 80px; }
+
+.hero { border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 22px; }
+
+.hero-top { display: flex; justify-content: space-between; align-items: baseline; }
+
+.brand { font-family: Fraunces, serif; font-size: 20px; font-weight: 600; letter-spacing: 0.2px; }
+
+.date { font-size: 12px; color: var(--ink-soft); }
+
+.clock { font-family: Fraunces, serif; font-size: 64px; font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.05; margin: 14px 0px 4px; }
+
+.next-line { font-size: 14px; color: var(--ink-soft); }
+
+.next-line b { color: var(--ink); font-weight: 600; }
+
+.hero-actions { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+button { font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); padding: 9px 14px; border-radius: 3px; cursor: pointer; }
+
+button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+
+button.danger { background: transparent; color: var(--danger); border: 1px solid var(--danger-soft); }
+
+button:active { transform: translateY(1px); }
+
+button:disabled { opacity: 0.5; cursor: default; }
+
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: 22px; overflow-x: auto; }
+
+.tab { padding: 10px 4px; margin-right: 20px; font-size: 13px; font-weight: 600; color: var(--ink-soft); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+
+.tab.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+.panel { display: none; }
+
+.panel.active { display: block; animation: 0.18s ease 0s 1 normal none running fade; }
+
+@keyframes fade { 
+  0% { opacity: 0; transform: translateY(2px); }
+  100% { opacity: 1; transform: none; }
+}
+
+h2 { font-family: Fraunces, serif; font-size: 19px; font-weight: 600; margin: 0px 0px 4px; }
+
+.sub { font-size: 13px; color: var(--ink-soft); margin: 0px 0px 18px; }
+
+.card { background: var(--paper-raised); border: 1px solid var(--line); border-radius: 4px; padding: 16px; margin-bottom: 14px; }
+
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.field { display: flex; flex-direction: column; gap: 4px; flex: 1 1 0%; min-width: 110px; }
+
+label { font-size: 11px; color: var(--ink-soft); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+
+input, select { font-family: Inter, sans-serif; font-size: 14px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 3px; background: rgb(255, 255, 255); color: var(--ink); }
+
+input:focus, select:focus, button:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.timeline { list-style: none; margin: 0px; padding: 0px; }
+
+.timeline li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0px; border-bottom: 1px solid var(--line); }
+
+.timeline li:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; }
+
+.tl-time { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 13px; min-width: 56px; color: var(--accent); }
+
+.tl-label { flex: 1 1 0%; font-size: 14px; }
+
+.tl-del { background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: var(--ink-soft); font-size: 13px; padding: 2px 6px; cursor: pointer; }
+
+.tl-del:hover { color: var(--danger); }
+
+.empty { font-size: 13px; color: var(--ink-soft); padding: 10px 0px; }
+
+.log-list { list-style: none; margin: 0px; padding: 0px; }
+
+.log-list li { display: flex; justify-content: space-between; padding: 9px 0px; border-bottom: 1px solid var(--line); font-size: 13px; }
+
+.log-list li:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; }
+
+.log-list .meta { color: var(--ink-soft); }
+
+.stat-row { display: flex; gap: 10px; margin-bottom: 14px; }
+
+.stat { flex: 1 1 0%; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; }
+
+.stat .num { font-family: Fraunces, serif; font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.stat .lbl { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+
+.toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0px; border-bottom: 1px solid var(--line); }
+
+.toggle-row:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; }
+
+.toggle-row .t-label { font-size: 14px; font-weight: 600; }
+
+.toggle-row .t-desc { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+
+.switch { width: 40px; height: 22px; border-radius: 11px; background: var(--line); position: relative; cursor: pointer; flex-shrink: 0; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px; }
+
+.switch.on { background: var(--success); }
+
+.switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: rgb(255, 255, 255); transition: left 0.15s; }
+
+.switch.on::after { left: 20px; }
+
+#toast { position: fixed; left: 16px; right: 16px; bottom: 16px; max-width: 608px; margin: 0px auto; background: var(--ink); color: var(--paper); border-radius: 5px; padding: 16px 18px; display: none; box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 24px; z-index: 50; }
+
+#toast.show { display: block; animation: 0.2s ease 0s 1 normal none running rise; }
+
+@keyframes rise { 
+  0% { transform: translateY(8px); opacity: 0; }
+  100% { transform: none; opacity: 1; }
+}
+
+#toast .tt { font-family: Fraunces, serif; font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+
+#toast .td { font-size: 13px; color: rgb(217, 210, 196); }
+
+#toast .tx { position: absolute; top: 10px; right: 12px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: rgb(217, 210, 196); font-size: 14px; cursor: pointer; }
+
+.note { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+
+.footnote { margin-top: 26px; font-size: 12px; color: var(--ink-soft); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 14px; }
+------MultipartBoundary--d8mNJuUSXCwfos5DSfAo6R1YvsIhiQMgNwaLVD4pSb------
